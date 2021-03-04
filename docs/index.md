@@ -107,18 +107,15 @@ print(int1 / int2)
 ```
 
 If the user enters a zero for the second integer they'll be presented with an error message like the one below: 
-> Enter the first integer: 2
+```
+Enter the first integer: 2
+Enter the second integer: 0
 
-> Enter the second integer: 0
-
-> Traceback (most recent call last):
-
->   File "/Users/Darivanh/Documents/_PythonClass/Assignment07/test.py", line 4, in <module>
-
->     print(int1 / int2)
-
-> ZeroDivisionError: division by zero
-
+Traceback (most recent call last):
+   File "/Users/Darivanh/Documents/_PythonClass/Assignment07/test.py", line 4, in <module>
+     print(int1 / int2)
+ ZeroDivisionError: division by zero
+```
 What if we could provide the user with a more descriptive message that explains the error, maybe even add a message to take further action? This can be accomplished by using the _try_ statement with the _except_ clause.
 
 For example:
@@ -134,10 +131,11 @@ except ZeroDivisionError:
     
 ```
 You'll error message would then read:
-> Enter the first integer: 1
-> Enter the second integer: 0
-> It's not possible to divide a number by 0. Try another number.
-
+```
+Enter the first integer: 1
+Enter the second integer: 0
+It's not possible to divide a number by 0. Try another number.
+```
 Isn't that a bit more pleasant and informative?
 
 Did you notice that the _execpt_ clause I added had the **ZeroDivisionError** type? That tells the code that if the user decides to divde by 0 display this message. But, what if the user decides to enter a letter? Can we check for that and display a message for each error? The answer is yet. In Michael Dawson's "Python Programming for the Absolute Beginner, Third Edition," the author provides a table on page 207, below.
@@ -155,28 +153,24 @@ Did you notice that the _execpt_ clause I added had the **ZeroDivisionError** ty
 | ValueError         | Raised when a built-in operation or function receives an argument that has the right type but an inappropriate value. |
 | ZeroDivisionError  | Raised when the second argument of a division or modulo operation is zero.                                            |
 
+
+I hope that I was able to help you better understand the concepts of pickling, unpickling, and error exceptions through writing a script for the Rick and Morty show. Please feel visit the sites in the Reference section below for more indept information.
+
 ___
 ### References
-NERDfirst. 0612 TV w/ NERDfirst. YouTube.com. 20 May 2014. YouTube.com.https://www.youtube.com/watch?v=uS37TujnLRw&ab_channel=0612TVw%2FNERDfirst. 27 February 2021
+"Serialization - A Crash Course." _YouTube.com_, uploaded by NERDfirst, 20 May 2014.https://www.youtube.com/watch?v=uS37TujnLRw&ab_channel=0612TVw%2FNERDfirst. 27 February 2021
 
-Kinsley, Harrison. Sendex. YouTube.com. 22 May 2015. https://www.youtube.com/watch?v=2Tw39kZIbhs&ab_channel=sentdex. 27 February 2021
+Kinsley, Harrison. "Python Pickle Module for saving objects (serialization)." _YouTube.com_, uploaded by Sendex, 22 May 2015. https://www.youtube.com/watch?v=2Tw39kZIbhs&ab_channel=sentdex. 27 February 2021
 
-Root, Randall. Zoom. 23 February 2021. https://www.youtube.com/watch?v=jiXmXhwgHp8&feature=youtu.be&ab_channel=IntelliJIDEAbyJetBrains. 23-28 Feb 2021.
+Root, Randall. _Zoom_. 23 February 2021. https://www.youtube.com/watch?v=jiXmXhwgHp8&feature=youtu.be&ab_channel=IntelliJIDEAbyJetBrains. 23-28 Feb 2021.
 
 Dawson, Michael. Python Programming for the Absolute Beginner, Third Edition. Boston, MA, Course Technology, a part of Cengage Learning, 2010.
 
-Sharma, Aditya. “Exception and Error Handling in Python”. Datacamp.com. 22 November 2019. https://www.datacamp.com/community/tutorials/exception-handling-python. 28 February 2021
+Sharma, Aditya. “Exception and Error Handling in Python”. _Datacamp.com_. 22 November 2019. https://www.datacamp.com/community/tutorials/exception-handling-python. 28 February 2021
 
-https://stackoverflow.com/questions/12761991/how-to-use-append-with-pickle-in-python. 28 February 2021
-
-“pickle – Python object serialization”. GeeksforGeeks.com. 22 November 2020. https://www.geeksforgeeks.org/pickle-python-object-serialization/ 1 March 2021
-
+Rangoli Thakur. "How to use append with pickle in python?" _stackoverflow.com_, https://stackoverflow.com/questions/12761991/how-to-use-append-with-pickle-in-python. 28 February 2021
 
 Pickle – Python object serialization. 2001 – 2021. Python Software Foundation. 02 March 2021. https://docs.python.org/3/library/pickle.html#:~:text=%E2%80%9CPickling%E2%80%9D%20is%20the%20process%20whereby,back%20into%20an%20object%20hierarchy. 27 February 2021
 
-“Pickle Rick.” Rick and Morty, created by Justin Roiland and Dan Harmon, written by Jessica Gao, Season 3, Episode 3, Adult Swim, Cartoon Network, 6 August 2017.
+“Pickle Rick.” Rick and Morty, created by Justin Roiland and Dan Harmon, written by Jessica Gao, Season 3, Episode 3, _Adult Swim_, Cartoon Network, 6 August 2017.
 
-
-Our code to open Jessica Gao’s binary file should include pickle.load(file_name). What that means is that we want the computer to look in the pickle module and tell it that we want to load the byte stream from the file Jessica Gao sent us called script.dat. She’s an amazing writer, not the best at naming binary files.
-
-In order to load the file, we’ll need to direct the computer to open the file and load it to a more human-readable format.  See code below:
