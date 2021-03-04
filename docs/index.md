@@ -6,9 +6,7 @@ Let’s get started with our project!
 
 **Background:** Rick and Morty, an adult animated television show, created by Justin Roiland and Dan Harmond need a revised script of the Season 3, Episode 3 show previously written by Jessica Gao called “Pickle Rick.”
 
-**The Project:** Jessica Gao has sent us the script but it’s been pickled and takes in two prompts for the name of the character and the character’s line. It’s our job to program unpickle the binary file containing the start to her revised script and add a few lines. 
-
-**Tasks:** We’ll need a few actions that will allow us to add lines to the script, view the script, and then save the file when we’re done.
+**The Project:** Jessica Gao has sent us her starter script but it’s been pickled. It’s our job to unpickle the file add a few lines and send it back to her. 
 
 
 ## Pickle and Unpickle
@@ -20,12 +18,17 @@ The pickle module allows users to save and transmit Python binary files, or bina
 For those beginning their journey into programming a few of those words may be unfamiliar. We'll break down what it means to pickle, or serialize, and unpickling, or de-serialize, a Python object structure. NERDfirst of the [0612 TV w/ NERDfirst](https://www.youtube.com/watch?v=uS37TujnLRw&ab_channel=0612TVw%2FNERDfirst![image]:https://user-images.githubusercontent.com/78838344/109901569-2978ad80-7c4e-11eb-8473-c98838bc0f7a.png)
 ) channel on YouTube.com, breaks down the process in simple everyday language and provides visuals that explain how each object is converted from a human readable structure into a byte stream, which is a from the computer can understand. The reverse then occurs in the de-serialization process, where the byte stream, or computer language, is converted into a human readable structure. Which is a long-winded way of saying when we need to talk to the computer we have to convert what we have into something the computer can understand, and when we need something from the computer we convert it to something we can understand. Below, Figure 1, is a screenshot of the binary language from the .dat file that we'll pickle and unpickle. 
 
-Figure 1, below, we see that some of the data is human-readable but the rest is the structure is not human-readable.
+Figure 1, below, we see that some of the byte stream is human-readable but the rest of the structure is not human-readable.
 
 ![Screenshot of a pickled file](https://github.com/darivanhatUW/IntroToProg-Python-Mod07/blob/main/docs/Screen%20Shot%202021-03-03%20at%201.09.10%20AM.png)
 _Figure1: Screenshot of a pickled data._
 
 ### Unpickling Code
+We first need to import the pickle module by including at the beginning of our code. (See below)
+```
+import pickle
+```
+...then we can use it in our code.
 ```
 file_obj = open(script.dat, “rb”)
 pickle.load(file_obj)
@@ -35,11 +38,11 @@ Breakdown:
 ```
 file_obj = open(script.dat, “rb”)
 ```
-**What's happening:** We're *open*ing the **script.dat** file to **"rb"** (read from a binary file) and then store that into the **file_obj** variable in order to use that function elsewhere. In this case, we're applying it to the pickle.load function.
+**What's happening:** We're *open*ing the **script.dat** file in order to read from a binary file by selecting the binary file access mode **"rb"**, then, store that into the **file_obj** variable where we'll use that function elsewhere. In this case, we're applying it to the pickle.load function.
 ```
 pickle.load(file_obj)
 ```
-**What's happening:** We're calling the pickle module to **load** the file we want to read.
+**What's happening:** We're calling the pickle module to use the **pickle.load()** function to read file.
 ```
 file_obj.close()
 ```
@@ -54,7 +57,44 @@ file_obj.close()
 ```
 [['Rick', 'Boom! I'm a pickle.'],['Morty','And?']]
 ```
-Looks a lot better than the crazy byte data we saw before we saw earlier, right?
+Looks a lot better than the crazy byte stream we saw before we saw earlier, right?
+
+## Writing to the Binary File
+Now that we're able to read the existing script we have a couple of options: 1) Add lines to the the existing script or 2) Overwrite the existing script. Once we've 
+finished with our portion of the script we'll need to pickle, or serialize, it before we save and send it off to Jessica Gao.
+
+### Pickling Code
+The pickle code for writing and appending to the file is similar to the unpickling code with few adjustments, we'll be changing the file access mode and the new **pickle.dump()** function. Let's say we want to keep the existing script and want to add more to it, we'll use the **"ab** file access mode, which appends to the existing binary file.
+
+### Appending to the script:
+```
+file_obj = open(script.dat, “ab”)
+pickle.dump(list_of_data, file_obj)
+file_obj.close()
+```
+Breakdown:
+```
+file_obj = open(script.dat, “ab”)
+```
+**What's happening:** Just as in the unpickling code we'll be **opening** the binary file, but this time we'll be include the **"ab"** file access mode so the code knows what what want to do with the file, then save it all to a variable in use later.
+```
+pickle.dump(list_of_data, file_obj)
+```
+**What's happening:** We access the pickle module again and this time we're using the **pickle.dump()** function to let the computer know that we want to write to the file. If you look there are two arguments: the information we want to pickle and the file we want to write to.
+```
+file_obj.close()
+```
+**What's happening:** As before, since we opened access to the file we need to close it.
+
+## Appending vs. Writing to a Binary File
+The code for writing to a binary file is similar but the file access mode used would be **"wb"**, which writes to the binary file. What then is the difference between **"ab"** and **"wb"**? When you're writing to the file, the data that you save to the file overwrites any existing data within the file. That means that if you didn't like the lines Jessica Gao included in the file you could overwrite them by changing the file access mode to **"wb"**.
+
+For more information on easy to follow and understand explanation of the pickle and unpickling process watch the video by user sentdex [Python Pickle for saving objects (serialization)](https://www.youtube.com/watch?v=2Tw39kZIbhs&ab_channel=sentdex).
+
+This file can now be saved and sent to Jessica Gao as I'm sure will be the best revised episode of "Pickle Rick" the world has seen.
+
+# Error Exceptions
+
 
 ### References
 NERDfirst. 0612 TV w/ NERDfirst. YouTube.com. 20 May 2014. YouTube.com.https://www.youtube.com/watch?v=uS37TujnLRw&ab_channel=0612TVw%2FNERDfirst. 27 February 2021
