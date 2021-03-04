@@ -98,8 +98,59 @@ As programmers just starting, it might even be true for experts, we encounter th
 
 How does this tie into our amazing revised "Pickle Rick" script? Well, fellow programmer, when we're writing our code and it works improperly or breaks we'll be spending more time trying to fix it rather than contributing our brilliance to the script. Besides, are you able to understand some of those crazy error messages when we break the code? Error exceptions allow us more control in handling the error and possibly display a more descriptive message.
 
+For example, the following code asks a user to enter two numbers:
+```
+int1 = int(input("Enter the first integer: "))
+int2 = int(input("Enter the second integer: "))
 
+print(int1 / int2)
+```
 
+If the user enters a zero for the second integer they'll be presented with an error message like the one below: 
+> Enter the first integer: 2
+> Enter the second integer: 0
+> Traceback (most recent call last):
+>   File "/Users/Darivanh/Documents/_PythonClass/Assignment07/test.py", line 4, in <module>
+>     print(int1 / int2)
+> ZeroDivisionError: division by zero
+
+What if we could provide the user with a more descriptive message that explains the error, maybe even add a message to take further action? This can be accomplished by using the _try_ statement with the _except_ clause.
+
+For example:
+```
+try:
+    int1 = int(input("Enter the first integer: "))
+    int2 = int(input("Enter the second integer: "))
+    
+    print(int1 / int2)
+    
+except ZeroDivisionError:
+    print("It's not possible to divide a number by 0. Try another number.")
+    
+```
+You'll error message would then read:
+> Enter the first integer: 1
+> Enter the second integer: 0
+> It's not possible to divide a number by 0. Try another number.
+
+Isn't that a bit more pleasant and informative?
+
+Did you notice that the _execpt_ clause I added had the **ZeroDivisionError** type? That tells the code that if the user decides to divde by 0 display this message. But, what if the user decides to enter a letter? Can we check for that and display a message for each error? The answer is yet. In Michael Dawson's "Python Programming for the Absolute Beginner, Third Edition," the author provides a table on page 207, below.
+
+| Selected Exception Types                                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------------------------------------:|
+| Exception Type     | Description                                                                                                           |
+| -------------------|:---------------------------------------------------------------------------------------------------------------------:|
+| IOError            | Raised when an I/O operation fails, such as when an attempt is made to open a nonexistent file in read mode.          |
+| IndexError         | Raised when a sequence is indexed with a number of a nonexistent element.                                             |
+| KeyError           | Raised when a dictionary key is not found.                                                                            |
+| Name Error         | Raised when a name (of a variable or function, for example) is not found.                                             |
+| SyntaxError        | Raised when a syntax error is encountered.                                                                            |
+| TypeError          | Raised when a built-in operation or function is applied to an object of inappropriate type.                           |
+| ValueError         | Raised when a built-in operation or function receives an argument that has the right type but an inappropriate value. |
+| ZeroDivisionError  | Raised when the second argument of a division or modulo operation is zero.                                            |
+
+___
 ### References
 NERDfirst. 0612 TV w/ NERDfirst. YouTube.com. 20 May 2014. YouTube.com.https://www.youtube.com/watch?v=uS37TujnLRw&ab_channel=0612TVw%2FNERDfirst. 27 February 2021
 
