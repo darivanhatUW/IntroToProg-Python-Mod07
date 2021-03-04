@@ -108,10 +108,15 @@ print(int1 / int2)
 
 If the user enters a zero for the second integer they'll be presented with an error message like the one below: 
 > Enter the first integer: 2
+
 > Enter the second integer: 0
+
 > Traceback (most recent call last):
+
 >   File "/Users/Darivanh/Documents/_PythonClass/Assignment07/test.py", line 4, in <module>
+
 >     print(int1 / int2)
+
 > ZeroDivisionError: division by zero
 
 What if we could provide the user with a more descriptive message that explains the error, maybe even add a message to take further action? This can be accomplished by using the _try_ statement with the _except_ clause.
