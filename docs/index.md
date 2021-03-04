@@ -94,6 +94,10 @@ For more information on easy to follow and understand explanation of the pickle 
 This file can now be saved and sent to Jessica Gao as I'm sure will be the best revised episode of "Pickle Rick" the world has seen.
 
 # Error Exceptions
+As programmers just starting, it might even be true for experts, we encounter the occassional error that stops our program from running or even runs but in an unexpected way. 
+
+How does this tie into our amazing revised "Pickle Rick" script? Well, fellow programmer, when we're writing our code and it works improperly or breaks we'll be spending more time trying to fix it rather than contributing our brilliance to the script. Besides, are you able to understand some of those crazy error messages when we break the code? Error exceptions allow us more control in handling the error and possibly display a more descriptive message.
+
 
 
 ### References
