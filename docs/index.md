@@ -4,11 +4,11 @@ Today, I’ll be introducing you to a Python module called pickle and handling e
 
 Let’s get started with our project!
 
-Background: Rick and Morty, an adult animated television show, created by Justin Roiland and Dan Harmond need a revised script of the Season 3, Episode 3 show previously written by Jessica Gao called “Pickle Rick.”
+**Background:** Rick and Morty, an adult animated television show, created by Justin Roiland and Dan Harmond need a revised script of the Season 3, Episode 3 show previously written by Jessica Gao called “Pickle Rick.”
 
-The Project: Jessica Gao has sent us the script but it’s been pickled and takes in two prompts for the name of the character and the character’s line. It’s our job to program unpickle the binary file containing the start to her revised script and add a few lines. 
+**The Project:** Jessica Gao has sent us the script but it’s been pickled and takes in two prompts for the name of the character and the character’s line. It’s our job to program unpickle the binary file containing the start to her revised script and add a few lines. 
 
-Tasks: We’ll need a few actions that will allow us to add lines to the script, view the script, and then save the file when we’re done.
+**Tasks:** We’ll need a few actions that will allow us to add lines to the script, view the script, and then save the file when we’re done.
 
 
 ## Pickle and Unpickle
@@ -21,13 +21,22 @@ For those beginning their journey into programming a few of those words may be u
 ```
 file_obj = open(script.dat, “rb”)
 pickle.load(file_obj)
-file.obj.close()
+file_obj.close()
 ```
 Breakdown:
 ```
 file_obj = open(script.dat, “rb”)
 ```
-We want to open the script.dat file to "rb" (read from a binary file) and then store that into the file_obj variable.
+**What's happening:** We're *open*ing the **script.dat** file to **"rb"** (read from a binary file) and then store that into the **file_obj** variable in order to use that function elsewhere. In this case, we're applying it to the pickle.load function.
+```
+pickle.load(file_obj)
+```
+**What's happening:** We're calling the pickle module to **load** the file we want to read.
+```
+file_obj.close()
+```
+**What's happening:** Once we've opened the file we need to close it. According to Randal Root's lecture February 23, 2021 for the University of Washington's Intro to Programming - Python class, forgetting to close files will bog down your computer and slow it down.
+
 
 
 ### References
