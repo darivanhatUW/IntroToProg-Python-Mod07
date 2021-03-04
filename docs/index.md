@@ -35,8 +35,17 @@ pickle.load(file_obj)
 ```
 file_obj.close()
 ```
-**What's happening:** Once we've opened the file we need to close it. According to Randal Root's lecture February 23, 2021 for the University of Washington's Intro to Programming - Python class, forgetting to close files will bog down your computer and slow it down.
+**What's happening:** Once we've opened the file we need to **close** it. According to Randal Root's lecture February 23, 2021 for the University of Washington's Intro to Programming - Python class, forgetting to close files will bog down your computer and slow it down.
 
+Once we've loaded the file we are then able to **print** a human-readable file. We can do that with the following **print** function, see code below:
+```
+file_obj = open(script.dat, “rb”)
+print(pickle.load(file_obj))
+file_obj.close()
+```
+```
+[['Rick', 'Boom! I'm a pickle.'],['','']]
+```
 
 
 ### References
