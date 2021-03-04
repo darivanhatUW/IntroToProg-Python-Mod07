@@ -1,4 +1,4 @@
-![Image of cartoon character Pickle Rick from the television show Rick and Morty. Text includes: Boom! I'm a pickle.](source/Im a pickle-80.jpg)
+![Image of cartoon character Pickle Rick from the television show Rick and Morty. Text includes: Boom! I'm a pickle.](docs/Im a pickle-80.jpg)
 
 Today, I’ll be introducing you to a Python module called pickle and handling error exceptions, both are means we can use to communicate between ourselves and computers. In every learning journey I have taken, I’ve always learned best through a project-based pedagogy which is how I’ll be presenting the pickle module and error exceptions. 
 
