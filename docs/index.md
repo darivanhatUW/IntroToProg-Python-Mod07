@@ -55,7 +55,7 @@ file_obj.close()
 ```
 [['Rick', 'Boom! I'm a pickle.'],['Morty','And?']]
 ```
-Looks a lot better than the crazy byte stream we saw before we saw earlier, right?
+Looks a lot better than the crazy byte stream we saw earlier, right?
 
 ## Writing to the Binary File
 Now that we're able to read the existing script we have a couple of options: 1) Add lines to the the existing script or 2) Overwrite the existing script. Once we've 
