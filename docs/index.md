@@ -21,8 +21,11 @@ For those beginning their journey into programming a few of those words may be u
 ) channel on YouTube.com, breaks down the process in simple everyday language and provides visuals that explain how each object is converted from a human readable structure into a byte stream, which is a from the computer can understand. The reverse then occurs in the de-serialization process, where the byte stream, or computer language, is converted into a human readable structure. Which is a long-winded way of saying when we need to talk to the computer we have to convert what we have into something the computer can understand, and when we need something from the computer we convert it to something we can understand. Below, Figure 1, is a screenshot of the binary language from the .dat file that we'll pickle and unpickle. 
 
 Figure 1, below, we see that some of the data is human-readable but the rest is the structure is not human-readable.
-![Screenshot of a pickled file](https://github.com/darivanhatUW/IntroToProg-Python-Mod07/blob/main/docs/Screen%20Shot%202021-03-03%20at%201.09.10%20AM.png)
 
+![Screenshot of a pickled file](https://github.com/darivanhatUW/IntroToProg-Python-Mod07/blob/main/docs/Screen%20Shot%202021-03-03%20at%201.09.10%20AM.png)
+_Figure1: Screenshot of a pickled data._
+
+### Unpickling Code
 ```
 file_obj = open(script.dat, “rb”)
 pickle.load(file_obj)
