@@ -1,6 +1,4 @@
-![Image of cartoon character Pickle Rick from the television show Rick and Morty. Text includes: Boom! I'm a pickle.](https://github.com/darivanhatUW/IntroToProg-Python-Mod07/blob/e766dd9d9ef62e8c0973f1c141759e79bddc2101/docs/Im%20a%20pickle-80.jpg)
-
-<%= image_tag "Im%20a%20pickle-80.jpg", class: 'logo' %>
+# BOOM! I'm a pickle.
 
 Today, I’ll be introducing you to a Python module called pickle and handling error exceptions, both are means we can use to communicate between ourselves and computers. In every learning journey I have taken, I’ve always learned best through a project-based pedagogy which is how I’ll be presenting the pickle module and error exceptions. 
 
@@ -17,11 +15,7 @@ Jessica Gao has sent us a file, called script.dat, and we need to unpickle it. L
 The pickle module allows users to save and transmit Python binary files, or binary-like objects, by processes called serializing and de-serializing. Some examples of binary file extensions are .pickle, .pkl, .db, and, what we’ll be using for our project, .dat.
 
 ### Unpickling Jessica Gao's File
-For those beginning their journey into programming a few of those words may be unfamiliar. We'll break down what it means to pickle, or serialize, and unpickling, or de-serialize, a Python object structure. NERDfirst of the [0612 TV w/ NERDfirst](https://www.youtube.com/watch?v=uS37TujnLRw&ab_channel=0612TVw%2FNERDfirst![image]:https://user-images.githubusercontent.com/78838344/109901569-2978ad80-7c4e-11eb-8473-c98838bc0f7a.png) channel on YouTube.com, breaks down the process in simple everyday language and provides visuals that explain how each object is converted from a human readable structure into a byte stream, which is a from the computer can understand. The reverse then occurs in the de-serialization process, where the byte stream, or computer language, is converted into a human readable structure. Which is a long-winded way of saying when we need to talk to the computer we have to convert what we have into something the computer can understand, and when we need something from the computer we convert it to something we can understand. Below, Figure 1, is a screenshot of the binary language from the .dat file that we'll pickle and unpickle. 
-
-![Screenshot of a pickled file](https://github.com/darivanhatUW/IntroToProg-Python-Mod07/blob/main/docs/Screen%20Shot%202021-03-03%20at%201.09.10%20AM.png)
-
-_Figure1: Screenshot of a pickled data._
+For those beginning their journey into programming a few of those words may be unfamiliar. We'll break down what it means to pickle, or serialize, and unpickling, or de-serialize, a Python object structure. NERDfirst of the [0612 TV w/ NERDfirst](https://www.youtube.com/watch?v=uS37TujnLRw&ab_channel=0612TVw%2FNERDfirst![image]:https://user-images.githubusercontent.com/78838344/109901569-2978ad80-7c4e-11eb-8473-c98838bc0f7a.png) channel on YouTube.com, breaks down the process in simple everyday language and provides visuals that explain how each object is converted from a human readable structure into a byte stream, which is a from the computer can understand. The reverse then occurs in the de-serialization process, where the byte stream, or computer language, is converted into a human readable structure. Which is a long-winded way of saying when we need to talk to the computer we have to convert what we have into something the computer can understand, and when we need something from the computer we convert it to something we can understand. 
 
 ### Unpickling Code
 We first need to import the pickle module by including at the beginning of our code. (See below)
@@ -57,7 +51,6 @@ file_obj.close()
 ```
 [['Rick', 'Boom! I'm a pickle.'],['Morty','And?']]
 ```
-Looks a lot better than the crazy byte stream we saw earlier, right?
 
 ## Writing to the Binary File
 Now that we're able to read the existing script we have a couple of options: 1) Add lines to the the existing script or 2) Overwrite the existing script. Once we've 
