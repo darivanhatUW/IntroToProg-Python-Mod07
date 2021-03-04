@@ -44,9 +44,9 @@ print(pickle.load(file_obj))
 file_obj.close()
 ```
 ```
-[['Rick', 'Boom! I'm a pickle.'],['','']]
+[['Rick', 'Boom! I'm a pickle.'],['Morty','And?']]
 ```
-
+Looks a lot better than the crazy byte data we saw before we saw earlier, right?
 
 ### References
 NERDfirst. 0612 TV w/ NERDfirst. YouTube.com. 20 May 2014. YouTube.com.https://www.youtube.com/watch?v=uS37TujnLRw&ab_channel=0612TVw%2FNERDfirst. 27 February 2021
