@@ -1,4 +1,5 @@
 ![Blog Header with Pickle Rick from the cartoon Rick and Morty.](https://github.com/darivanhatUW/IntroToProg-Python-Mod07/blob/main/docs/Im%20a%20pickle-80.jpg)
+
 Today, I’ll be introducing you to a Python module called pickle and handling error exceptions, both are means we can use to communicate between ourselves and computers. In every learning journey I have taken, I’ve always learned best through a project-based pedagogy which is how I’ll be presenting the pickle module and error exceptions. 
 
 Let’s get started with our project!
@@ -9,7 +10,8 @@ The Project: Jessica Gao has sent us the script but it’s been pickled and take
 
 Tasks: We’ll need a few actions that will allow us to add lines to the script, view the script, and then save the file when we’re done.
 
-##Pickle and Unpickle
+
+## Pickle and Unpickle
 Jessica Gao has sent us a file, called script.dat, and we need to unpickle it. Let’s explore what we need to know before we start the pickling and unpickling process. 
 
 The pickle module allows users to save and transmit Python binary files, or binary-like objects, by processes called serializing and de-serializing. Some examples of binary file extensions are .pickle, .pkl, .db, and, what we’ll be using for our project, .dat.
