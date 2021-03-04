@@ -138,8 +138,7 @@ Isn't that a bit more pleasant and informative?
 
 Did you notice that the _execpt_ clause I added had the **ZeroDivisionError** type? That tells the code that if the user decides to divde by 0 display this message. But, what if the user decides to enter a letter? Can we check for that and display a message for each error? The answer is yet. In Michael Dawson's "Python Programming for the Absolute Beginner, Third Edition," the author provides a table on page 207, below.
 
-| Selected Exception Types                                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------------------------------------:|
+## Selected Exception Types                                                                                                                   
 | Exception Type     | Description                                                                                                           |
 | -------------------|:---------------------------------------------------------------------------------------------------------------------:|
 | IOError            | Raised when an I/O operation fails, such as when an attempt is made to open a nonexistent file in read mode.          |
