@@ -140,7 +140,7 @@ Did you notice that the _execpt_ clause I added had the **ZeroDivisionError** ty
 
 ## Selected Exception Types                                                                                                                   
 | Exception Type     | Description                                                                                                           |
-| -------------------|:---------------------------------------------------------------------------------------------------------------------:|
+| -------------------|-----------------------------------------------------------------------------------------------------------------------|
 | IOError            | Raised when an I/O operation fails, such as when an attempt is made to open a nonexistent file in read mode.          |
 | IndexError         | Raised when a sequence is indexed with a number of a nonexistent element.                                             |
 | KeyError           | Raised when a dictionary key is not found.                                                                            |
