@@ -1,4 +1,4 @@
-![Blog Header with Pickle Rick from the cartoon Rick and Morty.](https://github.com/darivanhatUW/IntroToProg-Python-Mod07/blob/main/docs/Im%20a%20pickle-80.jpg)
+<img src="https://github.com/darivanhatUW/IntroToProg-Python-Mod07/blob/main/docs/Im%20a%20pickle-80.jpg" >
 
 Today, I’ll be introducing you to a Python module called pickle and handling error exceptions, both are means we can use to communicate between ourselves and computers. In every learning journey I have taken, I’ve always learned best through a project-based pedagogy which is how I’ll be presenting the pickle module and error exceptions. 
 
