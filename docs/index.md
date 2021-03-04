@@ -16,16 +16,17 @@ Jessica Gao has sent us a file, called script.dat, and we need to unpickle it. L
 
 The pickle module allows users to save and transmit Python binary files, or binary-like objects, by processes called serializing and de-serializing. Some examples of binary file extensions are .pickle, .pkl, .db, and, what we’ll be using for our project, .dat.
  
-For those beginning their journey into programming a few of those words may be unfamiliar. And, as any good explorer, let’s start what it means to pickle, or serialize, a Python object structure. NERDfirst of the 0612 TV w/ NERDfirst channel on YouTube.com, breaks down the process in simple everyday language and provides visuals that explain how each object is converted from a human readable structure into a byte stream, which is a from the computer can understand. The reverse then occurs in the de-serialization process, where the byte stream, or computer language, is converted into a human readable structure. Which is a long-winded way of saying when we need to talk to the computer we have to convert what we have into something the computer can understand, and when we need something from the computer we convert it to something we can understand. Below, Figure 1, is a screenshot of the binary language from the .dat file we’ll use to pickle and unpickle our script. As you can see some of it is recognizable but the rest is the structure is unreadable to humans.
+For those beginning their journey into programming a few of those words may be unfamiliar. We'll break down what it means to pickle, or serialize, a Python object structure. NERDfirst of the [0612 TV w/ NERDfirst](https://www.youtube.com/watch?v=uS37TujnLRw&ab_channel=0612TVw%2FNERDfirst![image](https://user-images.githubusercontent.com/78838344/109901569-2978ad80-7c4e-11eb-8473-c98838bc0f7a.png)
+) channel on YouTube.com, breaks down the process in simple everyday language and provides visuals that explain how each object is converted from a human readable structure into a byte stream, which is a from the computer can understand. The reverse then occurs in the de-serialization process, where the byte stream, or computer language, is converted into a human readable structure. Which is a long-winded way of saying when we need to talk to the computer we have to convert what we have into something the computer can understand, and when we need something from the computer we convert it to something we can understand. Below, Figure 1, is a screenshot of the binary language from the .dat file we’ll use to pickle and unpickle our script. As you can see some of it is recognizable but the rest is the structure is unreadable to humans.
 
 
 
-Our code to open Jessica Gao’s binary file should include pickle.load(file_name). What that means is that we want the computer to look in the pickle module and tell it that we want to load the byte stream from the file Jessica Gao sent us called script.dat. She’s an amazing writer, not the best at naming binary files.![image](https://user-images.githubusercontent.com/78838344/109900981-16191280-7c4d-11eb-9124-14f9900a1cec.png)
+Our code to open Jessica Gao’s binary file should include pickle.load(file_name). What that means is that we want the computer to look in the pickle module and tell it that we want to load the byte stream from the file Jessica Gao sent us called script.dat. She’s an amazing writer, not the best at naming binary files.
 
 In order to load the file, we’ll need to direct the computer to open the file and load it to a more human-readable format.  See code below:
 ```
-File_obj = open(script.dat, “rb”)
-Pickle.load(script.dat)
-File.obj.close()
+file_obj = open(script.dat, “rb”)
+pickle.load(file_obj)
+file.obj.close()
 ```
-In order to load the file, we'll need to direct the computer to open the file and load it to a more human
+
