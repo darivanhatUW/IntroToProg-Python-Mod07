@@ -133,7 +133,8 @@ Isn't that a bit more pleasant and informative?
 
 Did you notice that the _execpt_ clause I added had the **ZeroDivisionError** type? That tells the code that if the user decides to divde by 0 display this message. But, what if the user decides to enter a letter? Can we check for that and display a message for each error? The answer is yet. In Michael Dawson's "Python Programming for the Absolute Beginner, Third Edition," the author provides a table on page 207, below.
 
-## Selected Exception Types                                                                                                                   
+## Selected Exception Types 
+<table>
 | Exception Type     | Description                                                                                                           |
 | -------------------|-----------------------------------------------------------------------------------------------------------------------|
 | IOError            | Raised when an I/O operation fails, such as when an attempt is made to open a nonexistent file in read mode.          |
@@ -144,7 +145,20 @@ Did you notice that the _execpt_ clause I added had the **ZeroDivisionError** ty
 | TypeError          | Raised when a built-in operation or function is applied to an object of inappropriate type.                           |
 | ValueError         | Raised when a built-in operation or function receives an argument that has the right type but an inappropriate value. |
 | ZeroDivisionError  | Raised when the second argument of a division or modulo operation is zero.                                            |
+</table>
 
+<table>
+   <th><tr>| Exception Type     </tr><tr>| Description   </tr></th>                                                                                                        |
+<td>| -------------------|-----------------------------------------------------------------------------------------------------------------------|
+| IOError            | Raised when an I/O operation fails, such as when an attempt is made to open a nonexistent file in read mode.          |
+| IndexError         | Raised when a sequence is indexed with a number of a nonexistent element.                                             |
+| KeyError           | Raised when a dictionary key is not found.                                                                            |
+| Name Error         | Raised when a name (of a variable or function, for example) is not found.                                             |
+| SyntaxError        | Raised when a syntax error is encountered.                                                                            |
+| TypeError          | Raised when a built-in operation or function is applied to an object of inappropriate type.                           |
+| ValueError         | Raised when a built-in operation or function receives an argument that has the right type but an inappropriate value. |
+| ZeroDivisionError  | Raised when the second argument of a division or modulo operation is zero.                                            |
+</table>
 
 I hope that I was able to help you better understand the concepts of pickling, unpickling, and error exceptions through writing a script for the Rick and Morty show. Please feel visit the sites in the Reference section below for more indept information.
 
