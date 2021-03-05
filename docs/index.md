@@ -6,7 +6,7 @@ Let’s get started with our project!
 
 **Background:** Rick and Morty, an adult animated television show, created by Justin Roiland and Dan Harmond need a revised script of the Season 3, Episode 3 show previously written by Jessica Gao called “Pickle Rick.”
 
-**The Project:** Jessica Gao has sent us her starter script but it’s been pickled. It’s our job to unpickle the file add a few lines and send it back to her. 
+**The Project:** Jessica Gao has sent us her starter script but it’s been pickled. It’s our job to unpickle the file, add a few lines, and send it back to her. 
 
 
 ## Pickle and Unpickle
@@ -15,7 +15,7 @@ Jessica Gao has sent us a file, called script.dat, and we need to unpickle it. L
 The pickle module allows users to save and transmit Python binary files, or binary-like objects, by processes called serializing and de-serializing. Some examples of binary file extensions are .pickle, .pkl, .db, and, what we’ll be using for our project, .dat.
 
 ### Unpickling Jessica Gao's File
-For those beginning their journey into programming a few of those words may be unfamiliar. We'll break down what it means to pickle, or serialize, and unpickling, or de-serialize, a Python object structure. NERDfirst of the [0612 TV w/ NERDfirst](https://www.youtube.com/watch?v=uS37TujnLRw&ab_channel=0612TVw%2FNERDfirst![image]:https://user-images.githubusercontent.com/78838344/109901569-2978ad80-7c4e-11eb-8473-c98838bc0f7a.png) channel on YouTube.com, breaks down the process in simple everyday language and provides visuals that explain how each object is converted from a human readable structure into a byte stream, which is a from the computer can understand. The reverse then occurs in the de-serialization process, where the byte stream, or computer language, is converted into a human readable structure. Which is a long-winded way of saying when we need to talk to the computer we have to convert what we have into something the computer can understand, and when we need something from the computer we convert it to something we can understand. 
+For those beginning their journey into programming a few of those words may be unfamiliar. We'll break down what it means to pickle, or serialize, and unpickle, or de-serialize, a Python object structure. NERDfirst of the [0612 TV w/ NERDfirst](https://www.youtube.com/watch?v=uS37TujnLRw&ab_channel=0612TVw%2FNERDfirst![image]:https://user-images.githubusercontent.com/78838344/109901569-2978ad80-7c4e-11eb-8473-c98838bc0f7a.png) channel on YouTube.com, breaks down the process in simple everyday language and provides visuals that explain how each object is converted from a human readable structure into a byte stream, which is a from the computer can understand. The reverse then occurs in the de-serialization process, where the byte stream, or computer language, is converted into a human readable structure. Which is a long-winded way of saying when we need to talk to the computer we have to convert what we have into something the computer can understand, and when we need something from the computer we convert it to something we can understand. 
 
 ### Unpickling Code
 We first need to import the pickle module by including at the beginning of our code. (See below)
@@ -57,7 +57,7 @@ Now that we're able to read the existing script we have a couple of options: 1) 
 finished with our portion of the script we'll need to pickle, or serialize, it before we save and send it off to Jessica Gao.
 
 ### Pickling Code
-The pickle code for writing and appending to the file is similar to the unpickling code with few adjustments, we'll be changing the file access mode and the new **pickle.dump()** function. Let's say we want to keep the existing script and want to add more to it, we'll use the **"ab** file access mode, which appends to the existing binary file.
+The pickle code for writing and appending to the file is similar to the unpickling code with a few adjustments. We'll be changing the file access mode and using the **pickle.dump()** function. Let's say we want to keep the existing script and want to add more to it, we'll use the **"ab"** file access mode, which appends to the existing binary file.
 
 ### Appending to the script:
 ```
