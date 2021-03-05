@@ -146,7 +146,7 @@ Did you notice that the _execpt_ clause I added had the **ZeroDivisionError** ty
    <tr><td>ZeroDivisionError</td><td>Raised when the second argument of a division or modulo operation is zero.</td></tr>                                           
 </table>
 
-I hope that I was able to help you better understand the concepts of pickling, unpickling, and error exceptions through writing a script for the Rick and Morty show. Please feel visit the sites in the Reference section below for more indept information.
+I hope that I was able to help you better understand the concepts of pickling, unpickling, and error exceptions through writing a script for the Rick and Morty show. Please feel visit the sites in the Reference section below for more indepth information.
 
 ___
 ### References
