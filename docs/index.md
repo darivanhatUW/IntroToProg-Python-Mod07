@@ -148,9 +148,8 @@ Did you notice that the _execpt_ clause I added had the **ZeroDivisionError** ty
 </table>
 
 <table>
-   <th><tr>| Exception Type     </tr><tr>| Description   </tr></th>                                                                                                        |
-<td>| -------------------|-----------------------------------------------------------------------------------------------------------------------|
-| IOError            | Raised when an I/O operation fails, such as when an attempt is made to open a nonexistent file in read mode.          |
+   <th><tr> Exception Type     </tr><tr> Description   </tr></th>                                                                                                   
+   <td><tr>IOError</tr><tr>Raised when an I/O operation fails, such as when an attempt is made to open a nonexistent file in read mode.</tr></td>
 | IndexError         | Raised when a sequence is indexed with a number of a nonexistent element.                                             |
 | KeyError           | Raised when a dictionary key is not found.                                                                            |
 | Name Error         | Raised when a name (of a variable or function, for example) is not found.                                             |
